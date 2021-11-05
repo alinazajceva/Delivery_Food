@@ -42,6 +42,11 @@ buttonOut.addEventListener('click', () => {
 logInForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
+    if(inputPassword.value == '' || inputLogin.value == '') {
+        alert('Заполните все поля');
+        return false;
+    }
+
     const user = {
         login: inputLogin.value,
         password: inputPassword.value
