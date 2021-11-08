@@ -1,4 +1,5 @@
-const buttonAuth = document.querySelector('.button-auth');
+const auth = () => {
+    const buttonAuth = document.querySelector('.button-auth');
 const modalAuth = document.querySelector('.modal-auth');
 const buttonOut = document.querySelector('.button-out');
 const userName = document.querySelector('.user-name');
@@ -64,3 +65,6 @@ logInForm.addEventListener('submit', (event) => {
 if(localStorage.getItem('user')) {
     login(JSON.parse(localStorage.getItem('user')));
 }
+};
+
+auth();

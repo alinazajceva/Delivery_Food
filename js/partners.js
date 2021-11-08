@@ -1,4 +1,5 @@
-const cardsRestaurants = document.querySelector('.cards-restaurants');
+const partners = () => {
+    const cardsRestaurants = document.querySelector('.cards-restaurants');
 cardsRestaurants.classList.add('.');
 
 
@@ -7,7 +8,7 @@ const renderItems = (data) => {
         const {image, kitchen, name, price, products, stars, time_of_delivery } = item;
         const a = document.createElement('a');
 
-        a.setAttribute('href', '/restaurant.html');
+        a.setAttribute('href', 'restaurant.html');
         a.classList.add('card');
         a.classList.add('card-restaurant');
         a.dataset.products = products;
@@ -54,3 +55,7 @@ fetch('./db/partners.json')
 .catch((error) => {
     console.log(error);
 });
+
+};
+
+partners();
