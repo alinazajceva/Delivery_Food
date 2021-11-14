@@ -5,6 +5,8 @@ const cart = () => {
     const body = modalCart.querySelector('.modal-body');
 
     const renderItems = (data) => {
+        body.innerHTML = '';
+
         data.forEach(({ name, price, id, count }) => {
             const cartElem = document.createElement('div');
 
